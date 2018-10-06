@@ -1,0 +1,4 @@
+SELECT m.id,m.title,m.content,m.created,m.views,m.feature,m.likes,p.nickname FROM users as p RIGHT JOIN (select * from posts as n where n.id =1) as m on m.user_id = p.id LEFT JOIN categories as a on m.category_id = a.id;
+
+
+SELECT * FROM posts as n left JOIN (select * from users) as q on n.user_id = q.id

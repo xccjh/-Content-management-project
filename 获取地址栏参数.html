@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+</head>
+
+<body>
+    <script type="text/javascript">
+    //获取地址栏里（URL）传递的参数一
+    // function GetRequest(value) {
+    //     //url例子：www.bicycle.com?id="123456"&Name="bicycle"；
+    //     var url = decodeURI(location.search); //?id="123456"&Name="bicycle";
+    //     var object = {};
+    //     if (url.indexOf("?") != -1) //url中存在问号，也就说有参数。
+    //     {
+    //         var str = url.substr(1); //得到?后面的字符串
+    //         var strs = str.split("&"); //将得到的参数分隔成数组[id="123456",Name="bicycle"];
+    //         for (var i = 0; i < strs.length; i++) {
+    //             object[strs[i].split("=")[0]] = strs[i].split("=")[1]
+    //         }
+    //     }
+    //     return object[value];
+    // }
+    // alert(GetRequest("id"));
+    //获取地址栏里（URL）传递的参数二
+    // function GetQueryString(name) {
+    //     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    //     var r = window.location.search.substr(1).match(reg);
+    //     if (r != null) {
+    //         return unescape(r[2]);
+    //     }
+    //     return null;
+    // }
+    // alert(GetQueryString("id"));
+    // function UrlSearch()
+    //获取地址栏里（URL）传递的参数三
+	function UrlSearch()
+    {
+        var name, value;
+        var str = location.href; //取得整个地址栏
+        var num = str.indexOf("?");
+        str = str.substr(num + 1); //str得到?之后的字符串
+
+        var arr = str.split("&"); //得到&分割的参数，放入数组中
+        for (var i = 0; i < arr.length; i++) {
+            num = arr[i].indexOf("=");
+            if (num > 0) {
+                name = arr[i].substring(0, num);
+                value = arr[i].substr(num + 1);
+                this[name] = value;
+            }
+        }
+    }
+    var Request = new UrlSearch();
+    alert(Request.id);
+// window.location.href 或者 location.href 或者 window.location 获得地址栏中的所有内容
+// decodeURI()可以解码地址栏中的数据 恢复中文数据
+// window.search 获得地址栏中问号及问号之后的数据
+//在vue中可以通过this.$route获取路由对象然后根据具体需要取对象内容
+// this.$route.path 当前页面路由
+// this.$route.params 路由参数
+// this.$route.query 查询路由参数
+    </script>
+</body>
+
+</html>
