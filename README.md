@@ -10,7 +10,7 @@
 >
 > ### 管理员（编辑）通过网站后台管理界面管理（发布、维护）自媒体内容
 >
-> ![后台](.\md-imgs\后台.png)
+> ![后台](https://github.com/xccjh/A-Bootstrap-Apache-PHP-Mysql-Project/blob/master/md-imgs/%E5%90%8E%E5%8F%B0.png)
 >
 > - 用户登录
 >   - 登录界面可以根据是否填写表单内容拒绝登录操作
@@ -43,7 +43,7 @@
 >
 > ### 用户可以通过网站前台查看内容
 >
-> ![前台](.\md-imgs\前台.png)
+> ![前台](https://github.com/xccjh/A-Bootstrap-Apache-PHP-Mysql-Project/blob/master/md-imgs/%E5%89%8D%E5%8F%B0.png)
 >
 > - 公共模块
 >   - 通过左侧边栏导航菜单访问不同分类内容
