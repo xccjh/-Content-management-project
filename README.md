@@ -618,57 +618,8 @@
 > >   mysqli_close($connection);
 > >
 > >   // 其余类似。
-> >   ```
+> >  
 > >
-> >   ------
-> >
-> >   <?php 
-> >
-> >   		// 先引入外部文件
-> >   		require('../functions.php');
-> >   	// 1.获取提交过来的数据
-> >   	  // $_POST
-> >   		$id = $_POST['id'];
-> >   		// $email = $_POST['email'];
-> >   		// $slug = $_POST['slug'];
-> >   		// $nickname = $_POST['nickname'];
-> >   	
-> >   		// print_r($_POST);
-> >   		// exit;
-> >   	
-> >   		// // 2. 先连接数据库
-> >   		// $conn = mysqli_connect('127.0.0.1','root','root','cmsdatabase');
-> >   	
-> >   		// // 3.判断是否连接成功
-> >   		// if(!$conn){
-> >   		// 	die('数据库连接失败...');
-> >   		// }
-> >   	
-> >   		// // 4.设置编码集
-> >   		// mysqli_set_charset($conn,'utf-8');
-> >   	
-> >   		// 5.修改数据
-> >   	
-> >   		// $sql='update users set email= "'.$email.'",slug = "'.$slug.'",nickname = "'.$nickname.'" where id = '.$id;
-> >   	  // $sql =	"UPDATE users set email ='".$email."',slug='".$slug."',nickname = '".$nickname."' where id = ".$id;
-> >   	 // $res =	mysqli_query($conn,$sql);
-> >   		$res = update('users',$_POST,$id);
-> >   	 if($res){
-> >   	 	 $arr = array(
-> >   	 	 	"code"=>200,
-> >   	 	 	"msg"=>"修改成功"
-> >   	 	 );
-> >   	 }else {
-> >   	 	$arr = array(
-> >   	 	 	"code"=>201,
-> >   	 	 	"msg"=>"修改失败"
-> >   	 	 );
-> >   	 }
-> >   	
-> >   	 echo json_encode($arr);
-> >    ?>
-> >
-> >   ------
 > >
 > >   ## 获取当前登录用户信息
 > >
